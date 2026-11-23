@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Studio</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101323;
+  color: white;
+  text-align: center;
+}
+header {
+  padding: 22px;
+  background: #191e35;
+  font-size: 25px;
+  font-weight: bold;
+}
+main {
+  padding: 25px 15px;
+}
+.box {
+  background: #1d2440;
+  padding: 22px;
+  border-radius: 15px;
+  max-width: 450px;
+  margin: 20px auto;
+}
+textarea {
+  width: 95%;
+  height: 100px;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+button {
+  background: #7657ff;
+  color: white;
+  border: 0;
+  padding: 13px 22px;
+  border-radius: 8px;
+  margin: 12px 5px;
+  font-size: 16px;
+}
+input {
+  margin: 15px;
+}
+.price {
+  font-size: 30px;
+  color: #a995ff;
+}
+footer {
+  padding: 20px;
+  color: #aaa;
+}
+</style>
+</head>
+<body>
+
+<header>✨ AI STUDIO</header>
+
+<main>
+<h1>Create AI Videos</h1>
+<p>Turn your ideas into amazing videos.</p>
+
+<div class="box">
+<h2>🎬 Video Generator</h2>
+<p>Describe the video you want</p>
+<textarea id="prompt" placeholder="Describe your video..."></textarea>
+<br>
+<input type="file" accept="image/*,video/*">
+<br>
+<button onclick="generate()">Generate Video</button>
+<p id="result"></p>
+</div>
+
+<div class="box">
+<h2>⭐ Premium Subscription</h2>
+<p class="price">₹10 / month</p>
+<p>Access our premium AI Studio features.</p>
+<button onclick="subscribe()">Subscribe Now</button>
+</div>
+
+</main>
+
+<footer>© 2026 AI Studio | All Rights Reserved</footer>
+
+<script>
+function generate() {
+  const prompt = document.getElementById("prompt").value;
+  if (!prompt.trim()) {
+    alert("Please describe your video first!");
+    return;
+  }
+  document.getElementById("result").innerText =
+    "Your request is ready! AI video generation will be connected soon.";
+}
+
+function subscribe() {
+  alert("Premium payment setup is coming soon!");
+}
+</script>
+
+</body>
+</html>
